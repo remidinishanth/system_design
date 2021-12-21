@@ -1,4 +1,4 @@
-REF: https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README.md
+REF: https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README.md and https://www.codekarle.com/system-design/TinyUrl-system-design.html
 
 ### Functional Requirements
 * Get Short URL
