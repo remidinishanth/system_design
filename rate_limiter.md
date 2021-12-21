@@ -47,5 +47,5 @@ If there is more than one rate limiter, then if both the instances read the data
 We can also use cache to store the recent user's limit, this should be faster than going to the DB each time. We need to use `write-back`(writing to the db while evicting the entry/at periodic interval of fixed time) cache strategy to update the database.
 
 
-More advanced - having rules based on user
+### More advanced - having rules based on user
 ![image](https://user-images.githubusercontent.com/19663316/146985169-c4e39105-5b36-4d77-b34c-b782f711ba5d.png)
