@@ -36,6 +36,11 @@ Rate-limiter responsibility is to decide whether the client request will be serv
 * All the requests of a users are queued into a bucket, requests are processed at a fixed rate.
 * Leaky bucket (closely related to token bucket) is an algorithm that provides a simple, intuitive approach to rate limiting via a queue, which you can think of as a bucket holding the requests. When registering a request, the system appends it to the end of the queue. Processing for the first item on the queue occurs at a regular interval or first in, first out (FIFO). If the queue is full, then additional requests are discarded (or leaked).
 
+#### Token Bucket Algorithm
+* A token is added to the bucket every `1/r` seconds.
+* The bucket can hold at the most `max_requests_allowed` tokens. If a token arrives when the bucket is full, it is discarded.
+* When a request comes, if there is a token, decrement the token, and allow, if not discard the request. See the implementation below.
+
 ### Problems in Distributed Environment
 If there is more than one rate limiter, then if both the instances read the database then they might allow some extra requests
 
