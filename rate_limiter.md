@@ -49,3 +49,5 @@ We can also use cache to store the recent user's limit, this should be faster th
 
 ### More advanced - having rules based on user
 ![image](https://user-images.githubusercontent.com/19663316/146985169-c4e39105-5b36-4d77-b34c-b782f711ba5d.png)
+
+![image](https://user-images.githubusercontent.com/19663316/146985584-13680914-e004-410b-8f6f-c1537da78e4e.png)
