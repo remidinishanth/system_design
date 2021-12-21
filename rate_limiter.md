@@ -18,6 +18,7 @@ REF: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
 * As `accurate` as possible.
 
 ### Storage
+* UserID/Client Identifer - need to build based on the request - can be combination of IP or login
 * UserID, Count, StartTime/StartMinute
 
 Rate-limiter responsibility is to decide whether the client request will be served or declined. Middleware
@@ -44,3 +45,7 @@ If there is more than one rate limiter, then if both the instances read the data
 * If we use database `locks`, then there is some more latency.
 
 We can also use cache to store the recent user's limit, this should be faster than going to the DB each time. We need to use `write-back`(writing to the db while evicting the entry/at periodic interval of fixed time) cache strategy to update the database.
+
+
+More advanced - having rules based on user
+![image](https://user-images.githubusercontent.com/19663316/146985169-c4e39105-5b36-4d77-b34c-b782f711ba5d.png)
