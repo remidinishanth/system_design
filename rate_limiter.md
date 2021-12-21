@@ -1,3 +1,5 @@
+REF: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
+
 ## Request rate limiter
 
 * This rate limiter restricts each user to N requests per second. 
@@ -16,3 +18,9 @@
 * UserID, Count, StartTime
 
 Rate-limiter responsibility is to decide whether the client request will be served or declined. Middleware
+
+![image](https://user-images.githubusercontent.com/19663316/146977816-f902f3ab-ad32-414c-baeb-33049ba301bf.png)
+
+#### Fixed Minute algorithm
+* Store the number of requests for the user, in the current minute
+* Drawback: If there is a burst of requests at `12:01:59` and `12:02:01`, then we are allowing twice the limit of requests in a minute
