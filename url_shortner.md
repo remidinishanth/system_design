@@ -11,3 +11,5 @@ REF: https://github.com/donnemartin/system-design-primer/blob/master/solutions/s
 
 
 ### Length of Short URL
+* Based on the customers/users per month
+* Which all characters will you be using for this, based on the unique number of URLs you are going to generate
