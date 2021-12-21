@@ -3,8 +3,11 @@ REF: https://github.com/donnemartin/system-design-primer/blob/master/solutions/s
 ### Functional Requirements
 * Get Short URL
 * Given a short url, redirect to long URL
-* Expiry (advanced)
+* Expiry & Analytics (advanced)
 
 ### Non-Functional Requirements
 * Very Low latency
 * Very high availability
+
+
+### Length of Short URL
