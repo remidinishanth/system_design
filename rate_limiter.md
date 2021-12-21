@@ -13,8 +13,9 @@ REF: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
 * The client should get an error message(429, Too many requests) if the defined threshold limit of request is crossed for a single server or across different combinations of servers.
 
 ### Non-Functional Requirements:
-* The system should be highly available since it protects our service from external attacks.
+* The system should be `highly available` since it protects our service from external attacks.
 * `Low latency` - Performance is an important factor for any system. So, we need to be careful that rate limiter service should not add substantial latencies to the system.
+* As `accurate` as possible.
 
 ### Storage
 * UserID, Count, StartTime/StartMinute
