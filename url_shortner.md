@@ -15,5 +15,9 @@ REF: https://github.com/donnemartin/system-design-primer/blob/master/solutions/s
 * Which all characters will you be using for this, based on the unique number of URLs you are going to generate
 
 ### How to convert Long URL to short URL
-* Can try using MD5 for creating a shortURL
-* Create a token service, which can return a range of numbers(say 1000-2000), and it stores in DB that these numbers are assigned, whenever an instance of app needs tokens, it can call this token service and get the range of numbers it can use, convert this number to base62 and return the tinyURL
+* Can try using MD5 for creating a shortURL --> If mutilple users enter the same URL, system will return the same shortened URL.
+* Range based partitioning --> Create a token service, which can return a range of numbers(say 1000-2000), and it stores in DB that these numbers are assigned, whenever an instance of app needs tokens, it can call this token service and get the range of numbers it can use, convert this number to base62 and return the tinyURL
+
+
+### Link expiratin after a duration
+For removing links which have expired - we can run cron and remove the expired links from the db
