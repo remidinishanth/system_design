@@ -38,7 +38,7 @@ If there is more than one rate limiter, then if both the instances read the data
 
 ![image](https://user-images.githubusercontent.com/19663316/146981596-89935546-210e-4711-bb01-8abbb5b482c2.png)
 
-* To solve this, we might need to use sticky session load balancing to ensure that one user's request will only go to same rate limiter service. But then it's not fault tolerant design.
-* If we use database locks, then there is some more latency.
+* To solve this, we might need to use `sticky session` load balancing to ensure that one user's request will only go to same rate limiter service. But then it's not fault tolerant design.
+* If we use database `locks`, then there is some more latency.
 
 We can also use cache to store the recent user's limit, this should be faster than going to the DB each time. We need to use `write-back`(writing to the db while evicting the entry/at periodic interval of fixed time) cache strategy to update the database.
