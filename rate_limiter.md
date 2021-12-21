@@ -16,7 +16,7 @@ REF: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
 * Performance is an important factor for any system. So, we need to be careful that rate limiter service should not add substantial latencies to the system.
 
 ### Storage
-* UserID, Count, StartTime
+* UserID, Count, StartTime/StartMinute
 
 Rate-limiter responsibility is to decide whether the client request will be served or declined. Middleware
 
