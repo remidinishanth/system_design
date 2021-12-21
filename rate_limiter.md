@@ -4,6 +4,7 @@ REF: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
 
 * This rate limiter restricts each user to N requests per second. 
 * Request rate limiters are the first tool most APIs can use to effectively manage a high volume of traffic.
+* Others are inflight/concurrent request rate limit, location or ip based rate limiting
 
 
 ### Functional Requirements:
