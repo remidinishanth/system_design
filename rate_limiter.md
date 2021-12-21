@@ -58,3 +58,8 @@ We can also use cache to store the recent user's limit, this should be faster th
 ![image](https://user-images.githubusercontent.com/19663316/146986224-6c806000-b6eb-4e23-b72a-961d6cfe85a4.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/146985584-13680914-e004-410b-8f6f-c1537da78e4e.png)
+
+Each server can talk to other servers and sync the token count
+
+![image](https://user-images.githubusercontent.com/19663316/146986551-92ab314c-76a2-465a-933d-4f392e9d703b.png)
+
