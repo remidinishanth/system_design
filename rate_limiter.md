@@ -11,3 +11,8 @@
 ### Non-Functional Requirements:
 * The system should be highly available since it protects our service from external attacks.
 * Performance is an important factor for any system. So, we need to be careful that rate limiter service should not add substantial latencies to the system.
+
+### Storage
+* UserID, Count, StartTime
+
+Rate-limiter responsibility is to decide whether the client request will be served or declined. Middleware
