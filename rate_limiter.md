@@ -26,8 +26,12 @@ Rate-limiter responsibility is to decide whether the client request will be serv
 * Store the number of requests for the user, in the current minute
 * Drawback: If there is a burst of requests at `12:01:59` and `12:02:01`, then we are allowing twice the limit of requests in a minute
 
-### Sliding Window algorithm
+#### Sliding Window algorithm
 * Keep all the request in a queue, to check exactly -> requires lot of memory
+
+#### Leaky Bucket Algorithm
+* All the requests of a users are queued into a bucket, requests are processed at a fixed rate.
+* Leaky bucket (closely related to token bucket) is an algorithm that provides a simple, intuitive approach to rate limiting via a queue, which you can think of as a bucket holding the requests. When registering a request, the system appends it to the end of the queue. Processing for the first item on the queue occurs at a regular interval or first in, first out (FIFO). If the queue is full, then additional requests are discarded (or leaked).
 
 ### Problems in Distributed Environment
 If there is more than one rate limiter, then if both the instances read the database then they might allow some extra requests
