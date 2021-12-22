@@ -1,4 +1,4 @@
-REF: https://www.slideshare.net/oemebamo/introduction-to-memcached
+REF: https://www.slideshare.net/oemebamo/introduction-to-memcached and https://serhatgiydiren.github.io/system-design-interview-distributed-cache
 
 ## Caching
 * A copy of real data with faster(and/or cheaper) access
@@ -7,6 +7,15 @@ Simple Key/Value Store with the following operations
 * save
 * get
 * delete
+
+### Functional Requirements
+* put(key, value) : Stores object in the cache under some unique key
+* get(key) : Retrieves object from the cache based on the key
+
+### Non-Functional Requirements
+* Scalable (scales out easily together with increasing number of requests and data) : High scalability will help to ensure our cache can handle increased number of put and get requests. And be able to handle increasing amount of data we may need to store in the cache.
+* Highly Available (tolerates hardware / network failures, no single point of failure)
+* Highly Performant (fast put / get)
 
 ### Terminology
 * Storage cost
