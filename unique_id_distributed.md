@@ -11,7 +11,7 @@ GUIDs?
 Given the need for globally unique ids the obvious question is, why not use GUIDs? Mostly because GUIDs are big, and they index badly in MySQL. One of the ways we keep MySQL fast is we index everything we want to query on, and we only query on indexes. So index size is a key consideration.
 
 Centralizing Auto-Increments, have one MySQL db just for generating IDs.
-If we can’t make MySQL auto-increments work across multiple databases, what if we just used one database? This db can become really huge and unmanageable at some point in time.
+If we can’t make MySQL auto-increments work across multiple databases, what if we just used one database? This db can become really huge and unmanageable at some point in time. Also this is single point of failure/bottleneck.
 
 ### Single machine/Same machine
 * Incrementing ID --> Larger ID means the user is registered later.
