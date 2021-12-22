@@ -37,3 +37,4 @@ Simple Key/Value Store with the following operations
   - Linear Probing: When collision occurs, we linearly probe for the next bucket until an empty bucket is found.
   - Quadratic Probing: Quadratic probing operates by taking the original hash index and adding successive values of an arbitrary quadratic polynomial until an open slot is found. Example sequence: H+1^2, H+2^2, H+3^2, H+4^2,..., H+k^2
   - Double hashing: We use another hash function hash2(x) and look for i * hash2(x) bucket in ith iteration.
+  - Deletion is difficult in open addressing, will need to rearrange few keys after deletion, may be we will need to use dead flag(we can insert new elements in this slot).
