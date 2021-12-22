@@ -10,6 +10,9 @@ Use case Flickr: Ticket servers give us globally (Flickr-wide) unique integers t
 GUIDs?
 Given the need for globally unique ids the obvious question is, why not use GUIDs? Mostly because GUIDs are big, and they index badly in MySQL. One of the ways we keep MySQL fast is we index everything we want to query on, and we only query on indexes. So index size is a key consideration.
 
+Centralizing Auto-Increments, have one MySQL db just for generating IDs.
+If we can’t make MySQL auto-increments work across multiple databases, what if we just used one database? This db can become really huge and unmanageable at some point in time.
+
 ### Single machine/Same machine
 * Incrementing ID --> Larger ID means the user is registered later.
 * What if system goes down? We need to persist the ID which are used, we can do actually store the ID only once per 1000 requests, if system goes in between just increment the stored ID by 1000, so that we always return the unique IDs.
