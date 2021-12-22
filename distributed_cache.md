@@ -75,7 +75,13 @@ So, even if a single server is removed or added, all keys will likely need to be
 
 Consistent Hashing is a distributed hashing scheme that operates independently of the number of servers or objects in a distributed hash table by assigning them a position on an abstract circle, or hash ring. This allows servers and objects to scale without affecting the overall system.
 
-![image](https://user-images.githubusercontent.com/19663316/147115754-4bb22554-e8fa-4de0-bafb-7db1a30fad26.png)
+![image](https://user-images.githubusercontent.com/19663316/147120834-dde64338-7a20-4992-9d13-10252cfe3156.png)
+
+![image](https://user-images.githubusercontent.com/19663316/147120790-8527dee9-224b-46db-9b8b-96a0bedd664b.png)
+
+![image](https://user-images.githubusercontent.com/19663316/147120856-c33a503e-9dba-4607-91e4-c8090e738ebe.png)
+
+![image](https://user-images.githubusercontent.com/19663316/147120521-3e0254eb-81cd-4db5-9f86-8609c14988ce.png)
 
 Since we have the keys for both the objects and the servers on the same circle, we may define a simple rule to associate the former with the latter: Each object key will belong in the server whose key is closest, in a counterclockwise direction(or clockwise, depending on the conventions used).
 
