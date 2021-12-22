@@ -5,6 +5,7 @@ Usually there are a few requirements for ID generators:
 * They cannot be arbitrarily long. Let’s say we keep it within 64 bits.
 * ID is incremented by date. This gives the system a lot of flexibility, e.g. you can sort users by ID, which is same as ordering by register date.
 
+Use case Flickr: Ticket servers give us globally (Flickr-wide) unique integers to serve as primary keys in our distributed setup. REF: https://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/
 
 ### Single machine/Same machine
 * Incrementing ID --> Larger ID means the user is registered later.
