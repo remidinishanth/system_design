@@ -76,3 +76,5 @@
 ```  
   
 REF: https://leetcode.com/discuss/career/229177/my-system-design-template
+
+SQL vs NOSQL: https://aaronice.gitbook.io/system-design/distributed-systems/sql-vs-nosql
