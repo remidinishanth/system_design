@@ -29,3 +29,11 @@ Simple Key/Value Store with the following operations
 
 ### Working with HashTable:
 * Given a key, we can find the hash function and take modulo to find the bucket/slot in which we have to put this entry. If there are collisions, we can resolve it with separate chaining, open addressing, robin hood hashing.
+
+
+### Collision Resolution Techniques
+* Separate chaining technique creates a linked list to the slot for which collision occurs. Rehash data when the load factor(Number of elements/size of hash table) is too high.
+* Open Addressing: Unlike separate chaining, all the keys are stored inside the hash table. Probing is performed until an empty bucket is found. Once an empty bucket is found, the key is inserted.
+  - Linear Probing: When collision occurs, we linearly probe for the next bucket until an empty bucket is found.
+  - Quadratic Probing: Quadratic probing operates by taking the original hash index and adding successive values of an arbitrary quadratic polynomial until an open slot is found. Example sequence: H+1^2, H+2^2, H+3^2, H+4^2,..., H+k^2
+  - Double hashing: We use another hash function hash2(x) and look for i * hash2(x) bucket in ith iteration.
