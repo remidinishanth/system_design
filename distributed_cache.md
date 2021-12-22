@@ -47,3 +47,5 @@ Simple Key/Value Store with the following operations
   - Quadratic Probing: Quadratic probing operates by taking the original hash index and adding successive values of an arbitrary quadratic polynomial until an open slot is found. Example sequence: H+1^2, H+2^2, H+3^2, H+4^2,..., H+k^2
   - Double hashing: We use another hash function hash2(x) and look for i * hash2(x) bucket in ith iteration.
   - Deletion is difficult in open addressing, will need to rearrange few keys after deletion, may be we will need to use dead flag(we can insert new elements in this slot).
+
+![image](https://user-images.githubusercontent.com/19663316/147113662-bdeb0167-97d6-4e6e-a713-abb24d333221.png)
