@@ -49,3 +49,34 @@ Simple Key/Value Store with the following operations
   - Deletion is difficult in open addressing, will need to rearrange few keys after deletion, may be we will need to use dead flag(we can insert new elements in this slot).
 
 ![image](https://user-images.githubusercontent.com/19663316/147113662-bdeb0167-97d6-4e6e-a713-abb24d333221.png)
+
+
+### Scaling Out: Distributed Hashing
+
+REF: https://www.toptal.com/big-data/consistent-hashing
+
+In some situations, it may be necessary or desirable to split a hash table into several parts, hosted by different servers. One of the main motivations for this is to bypass the memory limitations of using a single computer, allowing for the construction of arbitrarily large hash tables (given enough servers).
+
+
+* The simplest way is to take the hash modulo of the number of servers. That is, server = hash(key) mod N, where N is the size of the pool. 
+* To store or retrieve a key, the client first computes the hash, applies a modulo N operation, and uses the resulting index to contact the appropriate server (probably by using a lookup table of IP addresses). 
+
+Note that the hash function used for key distribution must be the same one across all clients, but it need not be the same one used internally by the caching servers.
+
+#### The Rehashing Problem
+
+This distribution scheme is simple, intuitive, and works fine. That is, until the number of servers changes. 
+
+What happens if one of the `servers crashes or becomes unavailable`? Keys need to be **redistributed** to account for the missing server, of course. The same applies if one or more new servers are added to the pool;keys need to be redistributed to include the new servers. This is true for any distribution scheme, but the problem with our simple modulo distribution is that when the number of servers changes, most hashes modulo N will change, so most keys will need to be moved to a different server. 
+
+So, even if a single server is removed or added, all keys will likely need to be rehashed into a different server.
+
+#### Solution: Consistent Hashing
+
+Consistent Hashing is a distributed hashing scheme that operates independently of the number of servers or objects in a distributed hash table by assigning them a position on an abstract circle, or hash ring. This allows servers and objects to scale without affecting the overall system.
+
+![image](https://user-images.githubusercontent.com/19663316/147115754-4bb22554-e8fa-4de0-bafb-7db1a30fad26.png)
+
+Since we have the keys for both the objects and the servers on the same circle, we may define a simple rule to associate the former with the latter: Each object key will belong in the server whose key is closest, in a counterclockwise direction(or clockwise, depending on the conventions used).
+
+There are clients for several systems, such as Memcached and Redis, that include support for consistent hashing out of the box.
