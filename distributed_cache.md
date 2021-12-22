@@ -53,7 +53,7 @@ Simple Key/Value Store with the following operations
 
 ### Scaling Out: Distributed Hashing
 
-REF: https://www.toptal.com/big-data/consistent-hashing
+REF: https://www.toptal.com/big-data/consistent-hashing and https://medium.com/omarelgabrys-blog/consistent-hashing-beyond-the-basics-525304a12ba and http://www.ines-panker.com/2019/07/29/consistent-hashing.html
 
 In some situations, it may be necessary or desirable to split a hash table into several parts, hosted by different servers. One of the main motivations for this is to bypass the memory limitations of using a single computer, allowing for the construction of arbitrarily large hash tables (given enough servers).
 
