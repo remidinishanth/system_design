@@ -43,3 +43,18 @@ These ids need to be roughly sortable, meaning that if tweets A and B are posted
 ### Problem: Clock Synchronization
 
 There’s a hidden assumption that all ID generation servers have the same clock to generate the timestamp, which might not be true in distributed systems. In reality, system clocks can drastically skew in distributed systems
+
+
+#### Instagram ID generation:
+
+REF: https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c
+
+Before starting out, we listed out what features were essential in our system:
+* Generated IDs should be sortable by time (so a list of photo IDs, for example, could be sorted without fetching more information about the photos)
+* IDs should ideally be 64 bits (for smaller indexes, and better storage in systems like Redis)
+* The system should introduce as few new ‘moving parts’ as possible — a large part of how we’ve been able to scale Instagram with very few engineers is by choosing simple, easy-to-understand solutions that we trust.
+
+Each of our IDs consists of:
+* 41 bits for time in milliseconds (gives us 41 years of IDs with a custom epoch)
+* 13 bits that represent the logical shard ID
+* 10 bits that represent an auto-incrementing sequence, modulus 1024. This means we can generate 1024 IDs, per shard, per millisecond
