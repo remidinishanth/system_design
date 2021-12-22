@@ -35,7 +35,7 @@ Since within a single timestamp there can also be multiple users, we could solve
 
 `Final ID = Timestamp + ServerID + Counter`
 
-Limitation for counter: since the ID cannot be arbitarily long, the counter may end up with only 8bits for instance. In this case, the server can only handle 256 requests within a single timestamp at most. -- If it frequently exceeds this limit, we need to add more instances.
+Limitation for counter: since the ID cannot be arbitarily long, the counter may end up with only 8 bits for instance. In this case, the server can only handle 256 requests within a single timestamp at most. -- If it frequently exceeds this limit, we need to add more instances.
 
 Note:
 These ids need to be roughly sortable, meaning that if tweets A and B are posted around the same time, they should have ids in close proximity to one another since this is how we and most Twitter clients sort tweets.
