@@ -78,3 +78,29 @@
 REF: https://leetcode.com/discuss/career/229177/my-system-design-template
 
 SQL vs NOSQL: https://aaronice.gitbook.io/system-design/distributed-systems/sql-vs-nosql
+
+
+### 5 Tips for System Design interviews
+-- by Gaurav Sen
+1) Don't get into details prematurely
+2) Avoid fitting requirements to a set architecture in mind
+3) Keep it simple, stupid! Remember to look at the big picture and avoid too many hacks when solving.
+4) Have justifications for the points you make. Don't use buzz words or half hearted thoughts in your design.
+5) Be aware of the current solutions and tech practices. A lot of solutions can be purchased off the shelf which simplify implementation. You should be able to argue for a custom implementation with it's pros and cons.
+
+
+### Here are three major points evaluated during the interview:
+(1) Clarity of Thought
+  * Express your thoughts in a clear manner.
+  * Justify your decisions. Critical reasoning and argument are key to a successful software design.
+  * When faced with a problem, use standard approaches to mitigate it. For example, say you are faced with an availability problem. State that replication and partitioning help increase availability in general, and move on to offer a solution. d) Don’t make points without thinking them through. Half-hearted attempts at solving problems are frowned upon heavily.
+  
+(2) Knowledge
+  * Stay up to date with the current solutions in the market. This includes products and design practices. If NoSQL is being adopted left right and center, you need to be aware of it.
+  * Know when to pick a solution vs. building something custom. If you name a product, you should be (generally) aware of the features it provides.
+  * Design practices enable you to meet custom requirements. Examples are decoupling systems, load balancing, sticky sessions, etc…
+  
+(3) Flexibility
+  * Switch your targets as the requirements shift. If the interviewer wants to know about one particular part of the system, do it first.
+  * Never have a set architecture in mind. We all try to fit requirements to a system, but only after it has been shaped by the initial ones. A rigid attitude creates a brittle architecture. It will break before you do.
+  * Take a step back at times to make adjustments to the general architecture. Being focused on one part can narrow our vision and bloat those areas. There will be components which can be extracted out and extended to the rest of the system.
