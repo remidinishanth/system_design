@@ -79,6 +79,8 @@ REF: https://leetcode.com/discuss/career/229177/my-system-design-template
 
 SQL vs NOSQL: https://aaronice.gitbook.io/system-design/distributed-systems/sql-vs-nosql
 
+Websockets vs Polling: https://aaronice.gitbook.io/system-design/distributed-systems/long-polling-vs-websockets-vs-server-sent-events
+
 
 ### 5 Tips for System Design interviews
 -- by Gaurav Sen
