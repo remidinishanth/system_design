@@ -3,10 +3,7 @@ REF: https://www.slideshare.net/oemebamo/introduction-to-memcached and https://s
 ## Caching
 * A copy of real data with faster(and/or cheaper) access
 
-Simple Key/Value Store with the following operations
-* save
-* get
-* delete
+Simple Key/Value Store with the following operations `save`, `get` and `delete`.
 
 ### Functional Requirements
 * put(key, value) : Stores object in the cache under some unique key
