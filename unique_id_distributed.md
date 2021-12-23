@@ -5,7 +5,7 @@ Usually there are a few requirements for ID generators:
 * They cannot be arbitrarily long. Let’s say we keep it within 64 bits.
 * ID is incremented by date. This gives the system a lot of flexibility, e.g. you can sort users by ID, which is same as ordering by register date.
 
-Since it has to be unique: Our intuitation says that we can use time, get every millisecond/microsecond. Can call this time on different computers. What will we mix in IP addr, Ethernet HW addr or CPU serial number. Idenity of computer + time. What if we make the call for unique id within same time unit, may be we can use few more bits for a counter. Time doesn't always go forward on computers. NTP to sync time.
+Since it has to be unique: Our intuitation says that we can use time, get every millisecond/microsecond. Can call this time on different computers. What will we mix in IP addr, Ethernet HW addr or CPU serial number. Identity of computer + time. What if we make the call for unique id within same time unit, may be we can use few more bits for a counter. Time doesn't always go forward on computers. NTP to sync time.
 
 Instead of clock synchronization, we can use our own counter which increments for unique ID. We can write our ID only for a thousands of instructions. REF: https://www.youtube.com/watch?v=W6qURtqrldc&t=602s Since clock synchronization is hard, we can seperate this generation to a seperate service.
 
