@@ -1,4 +1,11 @@
-## system_design
+## Resources
+
+* https://github.com/binhnguyennus/awesome-scalability
+* https://github.com/codersguild/System-Design
+* https://github.com/donnemartin/system-design-primer
+
+
+## system_design interview
 
 ```
 (1) FEATURE EXPECTATIONS [5 min]
