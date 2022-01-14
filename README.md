@@ -94,6 +94,11 @@ Websockets vs Polling: https://aaronice.gitbook.io/system-design/distributed-sys
 ![image](https://user-images.githubusercontent.com/19663316/149452891-66593ffc-422a-4d98-ad39-e2c17207382b.png)
 
 
+Priniciples for High availability and Minimum latency:
+* If the system should be highly available, there should be no single point of failure.
+* If the system should work with minimum latency, there should be no bottleneck.
+
+
 ### 5 Tips for System Design interviews
 -- by Gaurav Sen
 1) Don't get into details prematurely
