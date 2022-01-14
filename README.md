@@ -91,6 +91,8 @@ SQL vs NOSQL: https://aaronice.gitbook.io/system-design/distributed-systems/sql-
 
 Websockets vs Polling: https://aaronice.gitbook.io/system-design/distributed-systems/long-polling-vs-websockets-vs-server-sent-events
 
+![image](https://user-images.githubusercontent.com/19663316/149452891-66593ffc-422a-4d98-ad39-e2c17207382b.png)
+
 
 ### 5 Tips for System Design interviews
 -- by Gaurav Sen
