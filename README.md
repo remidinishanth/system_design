@@ -4,6 +4,7 @@
 * https://github.com/codersguild/System-Design
 * https://github.com/donnemartin/system-design-primer
 * https://systemdesign.org/
+* https://completedesigninterviewcourse.com/system-design-concepts-components/
 
 
 ## system_design interview
