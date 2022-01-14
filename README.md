@@ -5,6 +5,7 @@
 * https://github.com/donnemartin/system-design-primer
 * https://systemdesign.org/
 * https://completedesigninterviewcourse.com/system-design-concepts-components/
+* https://github.com/Jeevan-kumar-Raj/Grokking-System-Design
 
 
 ## system_design interview
