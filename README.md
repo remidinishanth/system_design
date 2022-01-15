@@ -6,6 +6,7 @@
 * https://systemdesign.org/
 * https://completedesigninterviewcourse.com/system-design-concepts-components/
 * https://github.com/Jeevan-kumar-Raj/Grokking-System-Design
+* https://liuzhenglaichn.gitbook.io/system-design/news-feed/design-a-news-feed-system
 
 
 ## system_design interview
