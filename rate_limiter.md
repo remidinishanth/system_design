@@ -39,6 +39,27 @@ Rate-limiter responsibility is to decide whether the client request will be serv
 
 ![image](https://user-images.githubusercontent.com/19663316/152142957-97588d33-4820-498c-abba-927d3aca8eb7.png)
 
+Pseudo code: https://www.mikeperham.com/2020/11/09/the-leaky-bucket-rate-limiter/
+
+Each time we call the limiter, we check to see if enough time has passed for 1 or more drips. If the bucket is full, we return the amount of time until the next drip.
+
+```ruby
+# Decrement the drops based on the time which has passed since
+# the last call.
+if drops > 0 and (lastcall + driprate) < current_time then
+  drops = max(0, drops - math.floor((current_time - lastcall) / driprate))
+end
+
+# if the bucket has room for another drop, increment and return
+if drops < size then
+  redis.call("hset", key, "lastcall", current_time, "drops", drops+1)
+  return nil
+end
+
+# if the bucket is full, send the amount of time necessary to wait
+# for the next drop to drain.
+return (lastcall + driprate) - current_time
+```
 
 #### Token Bucket Algorithm
 * A token is added to the bucket every `1/r` seconds.
