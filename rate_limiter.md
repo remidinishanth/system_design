@@ -39,27 +39,6 @@ Rate-limiter responsibility is to decide whether the client request will be serv
 
 ![image](https://user-images.githubusercontent.com/19663316/152142957-97588d33-4820-498c-abba-927d3aca8eb7.png)
 
-Pseudo code: https://www.mikeperham.com/2020/11/09/the-leaky-bucket-rate-limiter/
-
-Each time we call the limiter, we check to see if enough time has passed for 1 or more drips. If the bucket is full, we return the amount of time until the next drip.
-
-```ruby
-# Decrement the drops based on the time which has passed since
-# the last call.
-if drops > 0 and (lastcall + driprate) < current_time then
-  drops = max(0, drops - math.floor((current_time - lastcall) / driprate))
-end
-
-# if the bucket has room for another drop, increment and return
-if drops < size then
-  redis.call("hset", key, "lastcall", current_time, "drops", drops+1)
-  return nil
-end
-
-# if the bucket is full, send the amount of time necessary to wait
-# for the next drop to drain.
-return (lastcall + driprate) - current_time
-```
 
 #### Token Bucket Algorithm
 * A token is added to the bucket every `1/r` seconds.
@@ -67,6 +46,15 @@ return (lastcall + driprate) - current_time
 * When a request comes, if there is a token, decrement the token, and allow, if not discard the request. See the implementation below.
 
 Token Bucket can send Large bursts at a faster rate while leaky bucket always sends packets at constant rate.
+
+![image](https://user-images.githubusercontent.com/19663316/152144295-d54bf8dd-187a-4708-8498-d4645e6f0bba.png)
+
+Leaky Bucket vs Token Bucket
+
+![image](https://user-images.githubusercontent.com/19663316/152144789-9f10d143-e605-4861-b1e9-e339a85a0d5a.png)
+
+![image](https://user-images.githubusercontent.com/19663316/152144801-b23358a0-3501-4e58-83c9-b07369ab9bbb.png)
+
 
 ### Problems in Distributed Environment
 If there is more than one rate limiter, then if both the instances read the database then they might allow some extra requests
