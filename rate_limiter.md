@@ -41,6 +41,8 @@ Rate-limiter responsibility is to decide whether the client request will be serv
 * The bucket can hold at the most `max_requests_allowed` tokens. If a token arrives when the bucket is full, it is discarded.
 * When a request comes, if there is a token, decrement the token, and allow, if not discard the request. See the implementation below.
 
+Token Bucket can send Large bursts at a faster rate while leaky bucket always sends packets at constant rate.
+
 ### Problems in Distributed Environment
 If there is more than one rate limiter, then if both the instances read the database then they might allow some extra requests
 
