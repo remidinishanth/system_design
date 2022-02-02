@@ -33,27 +33,26 @@ Rate-limiter responsibility is to decide whether the client request will be serv
 * Keep all the request in a queue, to check exactly -> requires lot of memory
 
 #### Leaky Bucket Algorithm
+
+Let us imagine a bucket with a small hole at the bottom. The rate at which water is poured into the bucket may vary, But it leaks from the bucket at a constant rate.
+
+![image](https://user-images.githubusercontent.com/19663316/152142957-97588d33-4820-498c-abba-927d3aca8eb7.png)
+
 * All the requests of a users are queued into a bucket, requests are processed at a **fixed rate**.
 * Leaky bucket (closely related to token bucket) is an algorithm that provides a simple, intuitive approach to rate limiting via a queue, which you can think of as a bucket holding the requests. 
 * When registering a request, the system appends it to the end of the queue. Processing for the first item on the queue occurs at a regular interval or first in, first out (FIFO). If the queue is full, then additional requests are discarded.
 
-![image](https://user-images.githubusercontent.com/19663316/152142957-97588d33-4820-498c-abba-927d3aca8eb7.png)
-
-
 #### Token Bucket Algorithm
+
+![image](https://user-images.githubusercontent.com/19663316/152144295-d54bf8dd-187a-4708-8498-d4645e6f0bba.png)
+
 * A token is added to the bucket every `1/r` seconds.
 * The bucket can hold at the most `max_requests_allowed` tokens. If a token arrives when the bucket is full, it is discarded.
 * When a request comes, if there is a token, decrement the token, and allow, if not discard the request. See the implementation below.
 
-Token Bucket can send Large bursts at a faster rate while leaky bucket always sends packets at constant rate.
-
-![image](https://user-images.githubusercontent.com/19663316/152144295-d54bf8dd-187a-4708-8498-d4645e6f0bba.png)
-
-Leaky Bucket vs Token Bucket
+Leaky Bucket vs Token Bucket: Token Bucket can send Large bursts at a faster rate while leaky bucket always sends packets at constant rate.
 
 ![image](https://user-images.githubusercontent.com/19663316/152144789-9f10d143-e605-4861-b1e9-e339a85a0d5a.png)
-
-![image](https://user-images.githubusercontent.com/19663316/152144801-b23358a0-3501-4e58-83c9-b07369ab9bbb.png)
 
 
 ### Problems in Distributed Environment
