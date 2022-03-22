@@ -8,6 +8,8 @@
 * https://github.com/Jeevan-kumar-Raj/Grokking-System-Design
 * https://liuzhenglaichn.gitbook.io/system-design/news-feed/design-a-news-feed-system
 
+* KISS (Keep It Stupid Simple), DRY (Don’t Repeat Yourself) and SOLID principles.
+
 
 ## system_design interview
 
