@@ -126,3 +126,8 @@ Priniciples for **High Availability** and **Minimum latency**:
   * Switch your targets as the requirements shift. If the interviewer wants to know about one particular part of the system, do it first.
   * Never have a set architecture in mind. We all try to fit requirements to a system, but only after it has been shaped by the initial ones. A rigid attitude creates a brittle architecture. It will break before you do.
   * Take a step back at times to make adjustments to the general architecture. Being focused on one part can narrow our vision and bloat those areas. There will be components which can be extracted out and extended to the rest of the system.
+
+
+### Computer Architecture Simplified
+
+![image](https://user-images.githubusercontent.com/19663316/161547376-c3dd8ee2-d56e-4257-80f1-16e650968449.png)
