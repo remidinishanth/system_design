@@ -71,3 +71,7 @@ In addition to the traditional load balancing between different instances, Envoy
 There are a few alternatives to Envoy proxy, such as Rust Proxy (Linkered is built on it), NGINX Proxy, HAProxy, etc. 
 
 Ref: https://www.tetrate.io/what-is-envoy-proxy/
+
+### Must TODO 
+
+* https://ibm-cloud-architecture.github.io/refarch-integration/journey/
