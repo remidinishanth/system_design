@@ -57,8 +57,17 @@ Checkout https://medium.com/aspnetrun/microservices-event-driven-architecture-wi
 **Istio** Service Mesh
 ![image](https://user-images.githubusercontent.com/19663316/169865776-7a5ec52e-6488-4f2a-a939-a0f35ac0edfa.png)
 
+#### Envoy
 **ENVOY** is an Open Source Edge And Service Proxy, Designed for Cloud-Native Applications. 
 * Built on the learnings of solutions such as NGINX, HAProxy, hardware load balancers, and cloud load balancers, Envoy runs alongside every application and abstracts the network by providing common features in a platform-agnostic manner. 
 * When all service traffic in an infrastructure flows via an Envoy mesh, it becomes easy to visualize problem areas via consistent observability, tune overall performance, and add substrate features in a single place.
 * Read more at https://www.getambassador.io/learn/envoy-proxy/
 * With the capability of hybrid communication between microservices and API gateway, Envoy proxy helps in handling traffic within data centers (east-west traffic) and also between data centers (north-south traffic). The platform team and network team can easily manage and monitor the traffic for multi-cloud applications.
+
+The notion is to run Envoy as a sidecar next to each service in an application, abstracting the network from the core business logic. Envoy provides features like load balancing, resiliency features such as timeouts, circuit breakers, retries, observability and metrics, and so on. The best part is, one can use Envoy as a network API gateway. These APIs are called discovery services, or xDS for short. 
+
+In addition to the traditional load balancing between different instances, Envoy also allows you to implement retries, circuit breakers, rate limiting, and so on. Also, while doing all that, Envoy collects rich metrics about the traffic it passes through and exposes the metrics for consumption and use in tools such as Grafana, for example.
+
+There are a few alternatives to Envoy proxy, such as Rust Proxy (Linkered is built on it), NGINX Proxy, HAProxy, etc. 
+
+Ref: https://www.tetrate.io/what-is-envoy-proxy/
