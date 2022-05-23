@@ -46,3 +46,5 @@ Read about Service Mesh https://www.nginx.com/blog/what-is-a-service-mesh/ and E
 10. Kth largest/smallest element in the rowwise and columnwise sorted Matrix
 
 Ref: https://leetcode.com/discuss/general-discussion/1893215/repeatedly-asked-microsoft-onsite-questions-ds-lld-hld
+
+Checkout https://medium.com/aspnetrun/microservices-event-driven-architecture-with-rabbitmq-and-docker-container-on-net-968d73052cbb
