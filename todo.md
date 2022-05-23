@@ -57,4 +57,4 @@ Checkout https://medium.com/aspnetrun/microservices-event-driven-architecture-wi
 **Istio** Service Mesh
 ![image](https://user-images.githubusercontent.com/19663316/169865776-7a5ec52e-6488-4f2a-a939-a0f35ac0edfa.png)
 
-**ENVOY** is an Open Source Edge And Service Proxy, Designed For Cloud-Native Applications
+**ENVOY** is an Open Source Edge And Service Proxy, Designed for Cloud-Native Applications.
