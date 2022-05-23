@@ -61,3 +61,4 @@ Checkout https://medium.com/aspnetrun/microservices-event-driven-architecture-wi
 * Built on the learnings of solutions such as NGINX, HAProxy, hardware load balancers, and cloud load balancers, Envoy runs alongside every application and abstracts the network by providing common features in a platform-agnostic manner. 
 * When all service traffic in an infrastructure flows via an Envoy mesh, it becomes easy to visualize problem areas via consistent observability, tune overall performance, and add substrate features in a single place.
 * Read more at https://www.getambassador.io/learn/envoy-proxy/
+* With the capability of hybrid communication between microservices and API gateway, Envoy proxy helps in handling traffic within data centers (east-west traffic) and also between data centers (north-south traffic). The platform team and network team can easily manage and monitor the traffic for multi-cloud applications.
