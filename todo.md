@@ -48,3 +48,8 @@ Read about Service Mesh https://www.nginx.com/blog/what-is-a-service-mesh/ and E
 Ref: https://leetcode.com/discuss/general-discussion/1893215/repeatedly-asked-microsoft-onsite-questions-ds-lld-hld
 
 Checkout https://medium.com/aspnetrun/microservices-event-driven-architecture-with-rabbitmq-and-docker-container-on-net-968d73052cbb
+
+**Hystrix** is a latency and fault tolerance library designed to isolate points of access to remote systems, services and 3rd party libraries, stop cascading failure and enable resilience in complex distributed systems where failure is inevitable.
+
+**Istio** Service Mesh
+![image](https://user-images.githubusercontent.com/19663316/169865776-7a5ec52e-6488-4f2a-a939-a0f35ac0edfa.png)
