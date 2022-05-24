@@ -78,3 +78,4 @@ Ref: https://www.tetrate.io/what-is-envoy-proxy/
 
 ### CNCF Landscapre
 * https://landscape.cncf.io/
+* Take a look at this when you get time https://opensource.com/article/19/8/cloud-native-projects
