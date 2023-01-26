@@ -91,3 +91,5 @@ There are clients for several systems, such as Memcached and Redis, that include
 ### Issues with Basic approach of Consistent hashing
 * It is impossible to keep the same size of partitions on the ring for all servers considering a server can be added or removed. A partition is the hash space betweeen adjacent servers. It is possible that size of the partitions on the ring assigned to each server is very small or fairly large.
 * It is possible to have a non-uniform key distribution on the ring. This might lead to hotspots because few servers will be accessed many more times than others.
+
+> A technique called virtual nodes or replicas is used to solve these problems.
