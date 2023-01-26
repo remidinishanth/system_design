@@ -1,3 +1,7 @@
+### Motivation for consistent hashing:
+* Minimize keys that needs to be re-distributed when servers are added or removed
+* Easy to scale horizontally - wants data to be more evenly distributed
+
 REF: https://www.slideshare.net/oemebamo/introduction-to-memcached and https://serhatgiydiren.github.io/system-design-interview-distributed-cache
 
 ## Caching
