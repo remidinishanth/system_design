@@ -105,3 +105,5 @@ There are clients for several systems, such as Memcached and Redis, that include
 A virtual node refers to the real node, each server is represented by multiple virtual nodes on the ring. For example if we assume each server has 3 virtual nodes(in real-world systems, the number of virtual nodes is much larger), server A will be mapped to A0, A1 and A2. Instead of just A, we can have A0, A1 and A2 to represent server A on the ring.
 
 ![image](https://user-images.githubusercontent.com/19663316/214826753-6bbca156-f75a-4fa8-8909-52b329b87b9a.png)
+
+Ref: https://liuzhenglaichn.gitbook.io/system-design/advanced/consistent-hashing
