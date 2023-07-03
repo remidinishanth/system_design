@@ -10,6 +10,7 @@
 
 * KISS (Keep It Stupid Simple), DRY (Don’t Repeat Yourself) and SOLID principles.
 
+TODO: https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users 
 
 ## system_design interview
 
