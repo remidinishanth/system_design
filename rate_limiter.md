@@ -1,5 +1,6 @@
 Ref: https://rdiachenko.com/posts/arch/rate-limiting/token-bucket-algorithm/
-REF: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
+
+Ref: https://towardsdatascience.com/designing-a-rate-limiter-6351bd8762c6
 
 ## Request rate limiter
 
